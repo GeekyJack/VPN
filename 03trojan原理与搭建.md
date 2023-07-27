@@ -6,15 +6,15 @@ trojan-go官方文档：[https://p4gefau1t.github.io/trojan-go/](https://buliang
 
 **trojan配置文件：**
 
-```json
+```shell
 {
     "run_type": "server",
     "local_addr": "0.0.0.0",
     "local_port": 443,
-    "remote_addr": "192.83.167.78",
+    "remote_addr": "192.83.167.78",#伪装地址
     "remote_port": 80,
     "password": [
-        "your_awesome_password"
+        "your_awesome_password"#密码可修改
     ],
     "ssl": {
         "cert": "server.crt",

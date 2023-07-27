@@ -19,6 +19,38 @@ vim /etc/shadowsocks-libev/config.json
 systemctl restart shadowsocks-libev.service
 # 查看shadowsocks运行日志：
 journalctl -u shadowsocks-libev.service -f
+# 插件
+apt install shadowsocks-v2ray-plugin
+
+root@vultr:~# dpkg -L shadowsocks-v2ray-plugin
+```
+
+```shell
+{
+    "server":"0.0.0.0",
+    "mode":"tcp_and_udp",
+    "server_port":8388,
+    "local_port":1080,
+    "password":"1jU3P7avAqqw",
+    "timeout":86400,
+    "method":"chacha20-ietf-poly1305"
+}
+
+```
+
+```shell
+{
+    "server":"0.0.0.0",
+    "mode":"tcp_and_udp",
+    "server_port":17388,
+    "local_port":1080,
+    "password":"1jU3P7avAqqw",
+    "timeout":86400,
+    "method":"chacha20-ietf-poly1305",
+    "plugin":"ss-v2ray-plugin",
+    "plugin_opts":"server"
+}
+
 ```
 
 **Ubuntu防火墙设置：**
