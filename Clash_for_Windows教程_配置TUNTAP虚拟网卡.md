@@ -117,7 +117,9 @@ mixin:
     enable: true    
     enhanced-mode: redir-host
     listen: :53
+#    listen: 0.0.0.0:53
     nameserver: 
+#    - 8.8.8.8 # 真实请求DNS，可多设置几个
       - https://doh.dns.sb/dns-query
       - https://dns.adguard.com/dns-query
       - https://cdn-doh.ssnm.xyz/dns-query
